@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-body: var(--font-roboto), sans-serif;
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(var(--parallax-from, 0));
+  }
+  to {
+    transform: translateY(var(--parallax-to, 0));
+  }
+}
+
+@utility parallax-y-* {
+  @supports (animation-timeline: scroll()) {
+    animation: parallax 200ms linear;
+    animation-timeline: view(y);
+    --parallax-from: calc(--value(integer) * var(--spacing) * -2);
+    --parallax-to: calc(--value(integer) * var(--spacing) * 2);
+  }
+}
+
+@utility -parallax-y-* {
+  @supports (animation-timeline: scroll()) {
+    animation: parallax 200ms linear;
+    animation-timeline: view(y);
+    --parallax-from: calc(--value(integer) * var(--spacing) * 2);
+    --parallax-to: calc(--value(integer) * var(--spacing) * -2);
+  }
+}
+
+body {
+  font: normal 100%/1.5 var(--font-body);
+  color: var(--color-neutral-50);
+  background-color: var(--color-neutral-950);
+}
