@@ -1,0 +1,113 @@
+---
+import { Image } from "astro:assets";
+import theMacallan01 from "../assets/the-macallan-01.jpg";
+---
+
+<div class="relative w-[screen] h-screen">
+  <canvas id="blackboard" class="block" />
+  <div class="absolute w-10 h-10 hidden bg-white rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse" id="cursor" />
+</div>
+
+<script>
+  const canvas = document.getElementById('blackboard') as HTMLCanvasElement;
+  const ctx = canvas?.getContext('2d')!;
+  const cursor = document.getElementById('cursor')! as HTMLDivElement;
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+  // Drawing variables
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+
+  // Brush settings
+  const brushSize = 8;
+  const brushColor = '#fafafa';
+
+  // Set up brush style
+  ctx.strokeStyle = brushColor;
+  ctx.lineWidth = brushSize;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+
+  // Global event listeners for drawing anywhere on screen
+  document.addEventListener('mousedown', startDrawing);
+  document.addEventListener('mousemove', draw);
+  document.addEventListener('mouseup', stopDrawing);
+
+  // Touch event listeners for mobile
+  document.addEventListener('touchstart', handleTouch, { passive: false });
+  document.addEventListener('touchmove', handleTouch, { passive: false });
+  document.addEventListener('touchend', stopDrawing);
+
+  function getPosition(e: MouseEvent | Touch) {
+    return {
+      x: e.clientX / window.innerWidth * canvas.width,
+      y: e.clientY / window.innerHeight * canvas.height
+    }
+  }
+
+  function startDrawing(e: MouseEvent) {
+    isDrawing = true;
+    const { x, y } = getPosition(e);
+    lastX = x;
+    lastY = y;
+  }
+
+  function draw(e: MouseEvent) {
+    cursor.classList.remove('hidden');
+    const { x, y } = getPosition(e);
+    
+    cursor.style.left = `${x/canvas.width*100}%`;
+    cursor.style.top = `${y/canvas.height*100}%`;
+
+    if (!isDrawing) return;
+
+
+    // Check if we're within canvas bounds
+    if (x >= 0 && x <= canvas.width && 
+        y >= 0 && y <= canvas.height) {
+      
+      // Draw line between last position and current position
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(x, y);
+      ctx.stroke();
+    }
+
+    // Update last position (even if outside canvas for smooth entry)
+    [lastX, lastY] = [x, y];
+  }
+
+  function stopDrawing() {
+    isDrawing = false;
+  }
+
+  function handleTouch(e: TouchEvent) {
+    e.preventDefault();
+    const touch = e.touches[0];
+    const { x, y } = getPosition(touch);
+
+    if (e.type === 'touchstart') {
+      isDrawing = true;
+      [lastX, lastY] = [x, y];
+    } else if (e.type === 'touchmove' && isDrawing) {
+      // Check if we're within canvas bounds
+
+        // Draw line between last position and current position
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+   
+
+      // Update last position (even if outside canvas for smooth entry)
+      [lastX, lastY] = [x, y];
+    }
+  }
+</script>
