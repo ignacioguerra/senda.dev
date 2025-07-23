@@ -1,0 +1,157 @@
+---
+import Logo from '../components/Logo.astro';
+import Waves from '../components/Waves.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<!-- <div class="w-screen h-screen flex max-sm:flex-col items-center justify-center gap-6 sm:gap-10">
+		<h1 class="sr-only">Senda.dev</h1>
+		<div class="text-5xl" aria-hidden="true">
+			<Logo />
+		</div>
+		<p class="text-lg">
+			<a href="mailto:contact@senda.dev">contact@senda.dev</a>
+		</p>
+	</div> -->
+	<Waves />
+	<main class="relative">
+		<div class="flex flex-col gap-20 lg:gap-40 h-screen">
+			<header class="px-20 pt-10 flex items-center justify-between">
+				<h1 class="sr-only">Senda.dev</h1>
+				<div class="text-4xl" aria-hidden="true">
+					<Logo />
+				</div>
+				<a href="mailto:contact@senda.dev" class="text-lg font-black">Contact Us</a>
+			</header>
+			<div class="px-10 max-w-4xl mx-auto flex-1 flex flex-col text-left items-center justify-center gap-10 pb-40">
+				<p class="text-7xl"><strong>Let’s make <span class="-inline-block">something remarkable</span> together.</strong></p>
+				<p class="text-lg">We partner with agencies and teams to build, launch, and grow digital products that stand out. From turning designs into fast, interactive websites to integrating AI tools and automating workflows, we provide flexible, expert support throughout your project’s lifecycle.</p>
+				<!-- <a href="mailto:hello@senda.dev" class="block text-2xl font-bold border border-neutral-100 rounded-full px-10 py-2 bg-neutral-950/90
+				hover:bg-neutral-100 hover:text-neutral-950 transition-colors">
+					Contact Us
+				</a> -->
+			</div>
+
+		</div>
+		<!-- Build
+Web Design
+Clear, functional, and visually appealing — we design interfaces and layouts aligned with your goals and users.
+
+
+Web Development
+We build modern, high-performance websites and applications using robust technologies and best practices.
+
+
+Interactive & Creative Experiences
+From subtle animations to experimental web projects, we craft engaging experiences that bring designs to life.
+Launch
+Product Discovery & Definition
+We help clients shape early-stage ideas into clear product plans — identifying user needs, key features, and the fastest path to validation.
+
+
+MVP Design & Development
+We build lean, focused versions of digital products to test ideas fast and get real-world feedback early.
+
+
+AI Tool Integration & Interfaces
+We integrate AI-powered tools like chatbots, smart search, and recommendation engines, designing intuitive interfaces that connect users with AI functionality.
+
+-->
+		<!-- <div class="-mt-10 mx-20 p-20 bg-neutral-50 text-neutral-950">
+
+			<h2>Services</h2>
+			<p>We partner with agencies and teams to build, launch, and grow digital products that stand out. From turning designs into fast, interactive websites to integrating AI tools and automating workflows, we provide flexible, expert support throughout your project’s lifecycle.</p>
+
+		</div> -->
+		<div class="grid grid-cols-4 gap-1 --mx-20 -mt-10 pt-0 px-0 ">
+			<div class="relative overflow-clip --rounded-2xl" >
+				<img src="https://dev.igguerra.com.ar/img/web3d-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl --scale-120 z-10 "
+			>
+				<img src="https://dev.igguerra.com.ar/img/the-macallan-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl">
+				<img src="https://dev.igguerra.com.ar/img/cn-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl">
+				<img src="https://dev.igguerra.com.ar/img/tu-history-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl">
+				<img src="https://dev.igguerra.com.ar/img/archivo-rosa-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl">
+				<img src="https://dev.igguerra.com.ar/img/mexican-caribbean-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl" >
+				<img src="https://dev.igguerra.com.ar/img/web3d-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl --scale-120 z-10 "
+			>
+				<img src="https://dev.igguerra.com.ar/img/the-macallan-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl">
+				<img src="https://dev.igguerra.com.ar/img/cn-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl">
+				<img src="https://dev.igguerra.com.ar/img/tu-history-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl">
+				<img src="https://dev.igguerra.com.ar/img/archivo-rosa-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+			<div class="relative overflow-clip --rounded-2xl">
+				<img src="https://dev.igguerra.com.ar/img/mexican-caribbean-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
+			</div>
+		</div>
+		<div class="py-40">
+			<div class="px-10 max-w-4xl mx-auto flex-1 flex flex-col gap-16 pb-40">
+				<h2 class="text-7xl font-bold">Let's <span>Build</span></h2>
+				<div class="grid grid-cols-[1fr_3fr] gap-16">
+					<h3 class="text-lg font-bold">Web Design</h3>
+					<p class="text-lg">Clear, functional, and visually appealing — we design interfaces and layouts aligned with your goals and users.</p>
+					<h3 class="text-lg font-bold">Web Development</h3>
+					<p class="text-lg">We build modern, high-performance websites and applications using robust technologies and best practices.</p>
+					<h3 class="text-lg font-bold">Interactive & Creative Experiences</h3>
+					<p class="text-lg">From subtle animations to experimental web projects, we craft engaging experiences that bring designs to life.</p>
+				</div>
+			</div>
+			<div class="px-10 max-w-4xl mx-auto flex-1 flex flex-col gap-16 pb-40">
+				<h2 class="text-7xl font-bold">Let's <span>Launch</span></h2>
+				<div class="grid grid-cols-[1fr_3fr] gap-16">
+					<h3 class="text-lg font-bold">Product Discovery & Definition</h3>
+					<p class="text-lg">We help clients shape early-stage ideas into clear product plans — identifying user needs, key features, and the fastest path to validation.</p>
+					<h3 class="text-lg font-bold">MVP Design & Development</h3>
+					<p class="text-lg">We build lean, focused versions of digital products to test ideas fast and get real-world feedback early.</p>
+					<h3 class="text-lg font-bold">AI Tool Integration & Interfaces</h3>
+					<p class="text-lg">We integrate AI-powered tools like chatbots, smart search, and recommendation engines, designing intuitive interfaces that connect users with AI functionality.</p>
+				</div>
+			</div>
+			<div class="px-10 max-w-4xl mx-auto flex-1 flex flex-col gap-16 pb-40">
+				<h2 class="text-7xl font-bold">Let's <span>Grow</span></h2>
+				<div class="grid grid-cols-[1fr_3fr] gap-16">
+					<h3 class="text-lg font-bold">Maintenance & Growth Support</h3>
+					<p class="text-lg">We provide ongoing support to keep your site or app running smoothly — updates, bug fixes, and new feature rollouts included.</p>
+					<h3 class="text-lg font-bold">Team Augmentation / Collaboration</h3>
+					<p class="text-lg">We collaborate closely with agencies and product teams — adapting to your workflow, tools, and timeline to help you deliver more, faster.</p>
+					<h3 class="text-lg font-bold">Digital Process Automation</h3>
+					<p class="text-lg">We streamline workflows using AI and automation — from content generation and tagging to publishing pipelines and user interactions, tailored to your platforms.</p>
+				</div>
+			</div>
+		</div>
+		<div class="min-h-screen text-neutral-950 flex items-center justify-center backdrop-invert">
+			<div class="px-10 max-w-4xl mx-auto flex-1 flex justify-center items-center gap-10">
+				<div class="text-7xl" aria-hidden="true">
+					<Logo />
+				</div>
+				<!-- <h2 class="text-7xl font-bold">Contact Us</h2> -->
+				<a href="mailto:contact@senda.dev" class="text-2xl block font-bold">
+					contact@senda.dev
+				</a>
+			</div>
+		</div>
+		<footer class="px-20 py-8 bg-neutral-950 flex flex-col justify-center items-center gap-4">
+			<p>Coding with ❤️ from 🇦🇷</p>
+		</footer>
+	</main>
+</Layout>
