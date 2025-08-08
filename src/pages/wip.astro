@@ -1,6 +1,8 @@
 ---
 import Logo from '../components/Logo.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
 import Waves from '../components/Waves.astro';
+import { projects } from '../constants/projects';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -64,46 +66,7 @@ We integrate AI-powered tools like chatbots, smart search, and recommendation en
 			<p>We partner with agencies and teams to build, launch, and grow digital products that stand out. From turning designs into fast, interactive websites to integrating AI tools and automating workflows, we provide flexible, expert support throughout your project’s lifecycle.</p>
 
 		</div> -->
-		<div class="grid grid-cols-4 gap-1 --mx-20 -mt-10 pt-0 px-0 ">
-			<div class="relative overflow-clip --rounded-2xl" >
-				<img src="https://dev.igguerra.com.ar/img/web3d-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl --scale-120 z-10 "
-			>
-				<img src="https://dev.igguerra.com.ar/img/the-macallan-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl">
-				<img src="https://dev.igguerra.com.ar/img/cn-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl">
-				<img src="https://dev.igguerra.com.ar/img/tu-history-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl">
-				<img src="https://dev.igguerra.com.ar/img/archivo-rosa-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl">
-				<img src="https://dev.igguerra.com.ar/img/mexican-caribbean-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl" >
-				<img src="https://dev.igguerra.com.ar/img/web3d-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl --scale-120 z-10 "
-			>
-				<img src="https://dev.igguerra.com.ar/img/the-macallan-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl">
-				<img src="https://dev.igguerra.com.ar/img/cn-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl">
-				<img src="https://dev.igguerra.com.ar/img/tu-history-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl">
-				<img src="https://dev.igguerra.com.ar/img/archivo-rosa-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-			<div class="relative overflow-clip --rounded-2xl">
-				<img src="https://dev.igguerra.com.ar/img/mexican-caribbean-01.jpg" alt="Senda.dev" class="relative block w-full h-auto aspect-6/5 object-cover"/>
-			</div>
-		</div>
+		<ProjectGrid projects={projects} />
 		<div class="py-40">
 			<div class="px-10 max-w-4xl mx-auto flex-1 flex flex-col gap-16 pb-40">
 				<h2 class="text-7xl font-bold">Let's <span>Build</span></h2>
